@@ -603,19 +603,19 @@ const RobotOperator = ({
                 }
 
                 if (torsoRef.current) {
-                    // Tracking torso rotation - POSITIVE LOGIC FOR NATURAL TRACKING
+                    // Tracking torso rotation - INVERTED (Negative) LOGIC FOR NATURAL TRACKING (Mouse Right -> Robot Right)
                     const mouseX = state.mouse.x;
                     const mouseY = state.mouse.y;
-                    torsoRef.current.rotation.z = lerp(torsoRef.current.rotation.z, mouseX * 0.1, 0.05);
+                    torsoRef.current.rotation.z = lerp(torsoRef.current.rotation.z, -mouseX * 0.1, 0.05);
                     torsoRef.current.rotation.x = lerp(torsoRef.current.rotation.x, -mouseY * 0.1, 0.05);
                 }
 
                 if (headRef.current) {
-                    // Tracking head rotation - POSITIVE LOGIC FOR NATURAL TRACKING
+                    // Tracking head rotation - INVERTED (Negative) LOGIC
                     const mouseX = state.mouse.x;
                     const mouseY = state.mouse.y;
                     
-                    const targetRotY = mouseX * 0.8; // Look TOWARDS mouse X
+                    const targetRotY = -mouseX * 0.8; // Look TOWARDS mouse X (Negative RotY is Right)
                     const targetRotX = -mouseY * 0.5; // Look TOWARDS mouse Y (Up is Up)
 
                     headRef.current.rotation.y = lerp(headRef.current.rotation.y, targetRotY, 0.1);
