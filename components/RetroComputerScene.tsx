@@ -1,3 +1,4 @@
+
 import React, { useRef, useState, useMemo, useLayoutEffect, useEffect, useCallback } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Grid, MeshReflectorMaterial, useCursor, Stars, Text } from '@react-three/drei';
@@ -602,20 +603,20 @@ const RobotOperator = ({
                 }
 
                 if (torsoRef.current) {
-                    // Tracking torso rotation - INVERTED LOGIC
+                    // Tracking torso rotation - POSITIVE LOGIC FOR NATURAL TRACKING
                     const mouseX = state.mouse.x;
                     const mouseY = state.mouse.y;
-                    torsoRef.current.rotation.z = lerp(torsoRef.current.rotation.z, -mouseX * 0.1, 0.05);
-                    torsoRef.current.rotation.x = lerp(torsoRef.current.rotation.x, mouseY * 0.1, 0.05);
+                    torsoRef.current.rotation.z = lerp(torsoRef.current.rotation.z, mouseX * 0.1, 0.05);
+                    torsoRef.current.rotation.x = lerp(torsoRef.current.rotation.x, -mouseY * 0.1, 0.05);
                 }
 
                 if (headRef.current) {
-                    // Tracking head rotation - INVERTED LOGIC
+                    // Tracking head rotation - POSITIVE LOGIC FOR NATURAL TRACKING
                     const mouseX = state.mouse.x;
                     const mouseY = state.mouse.y;
                     
-                    const targetRotY = -mouseX * 0.8; // Look opposite to mouse X
-                    const targetRotX = mouseY * 0.5; // Look opposite to mouse Y (so Up is Up)
+                    const targetRotY = mouseX * 0.8; // Look TOWARDS mouse X
+                    const targetRotX = -mouseY * 0.5; // Look TOWARDS mouse Y (Up is Up)
 
                     headRef.current.rotation.y = lerp(headRef.current.rotation.y, targetRotY, 0.1);
                     headRef.current.rotation.x = lerp(headRef.current.rotation.x, targetRotX, 0.1);

@@ -74,7 +74,7 @@ export const PORTFOLIO_DATA = {
   ] as Project[],
   experience: [
     {
-      id: "2",
+      id: "exp-1",
       role: "Intern",
       company: "Deloitte Australia (Virtual)",
       period: "2024",
@@ -82,6 +82,36 @@ export const PORTFOLIO_DATA = {
         "Completed a virtual internship focused on data visualization and analytical storytelling using industry tools.",
         "Gained hands-on experience with dashboards, charts, and visual reports to interpret and present data insights.",
         "Learned key concepts in business intelligence, data communication, and visualization best practices."
+      ]
+    },
+    {
+      id: "cert-1",
+      role: "Generative AI Workshop",
+      company: "NxtWave",
+      period: "Feb 2025",
+      description: [
+        "Successfully completed the 'AI for Students: Build Your Own Generative AI Model' workshop conducted by AI expert Mr. Abhinav Devaguptapu.",
+        "Gained practical experience in building and understanding Generative AI models and core AI workflows."
+      ]
+    },
+    {
+      id: "cert-2",
+      role: "Foundation Course Trainee",
+      company: "Edunet Foundation / AICTE",
+      period: "Aug 2025",
+      description: [
+        "Completed the Foundation Course on Green Skills & Artificial Intelligence under the Skills4Future Program.",
+        "Learned fundamentals of sustainable technology, AI applications, and future-ready digital skills."
+      ]
+    },
+    {
+      id: "cert-3",
+      role: "Participant",
+      company: "Model Business Summit (LTCE)",
+      period: "2025",
+      description: [
+        "Actively participated in the Model Business Summit 2025 in the Retail & Innovation sector at LTCE.",
+        "Demonstrated strong teamwork, problem-solving, and business ideation skills while working on an innovation-focused case."
       ]
     }
   ] as Experience[]

@@ -10,7 +10,7 @@ export const TerminalChat = () => {
     {
       id: 'init',
       role: 'model',
-      text: 'System initialized. Neural interface active.\nHello! I am the AI representation of Alex. Ask me about my projects, skills, or experience.',
+      text: 'System initialized. Neural interface active.\nHello! I am the AI representation of Nikhilesh. Ask me about my projects, skills, or experience.',
     },
   ]);
   const [isLoading, setIsLoading] = useState(false);
@@ -90,7 +90,7 @@ export const TerminalChat = () => {
             <Terminal className="w-4 h-4 text-cyber" />
         </div>
         <div className="flex flex-col">
-            <span className="text-sm font-mono font-bold text-slate-200">alex_ai_agent.exe</span>
+            <span className="text-sm font-mono font-bold text-slate-200">nikhilesh_ai_agent.exe</span>
             <span className="text-[10px] text-cyber animate-pulse flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-cyber"></span>
                 ONLINE
